@@ -30,63 +30,63 @@ Implementar un sistema de trazabilidad y análisis que:
 
 - **ID de consulta**
 
-- **Nombre de usuario**: En caso de no estar registrado — Null.
+- **Nombre de usuario**: En caso de no estar registrado — Null.
 
 - **Rol de usuario**:
 
-  - Desarrollador Full Stack
+  - Desarrollador Full Stack
 
-  - Desarrollador Frontend
+  - Desarrollador Frontend
 
-  - Desarrollador Backend
+  - Desarrollador Backend
 
-  - QA
+  - QA
 
-  - Data Analyst
+  - Data Analyst
 
-- **Texto de la consulta**: Pregunta realizada.
+- **Texto de la consulta**: Pregunta realizada.
 
 - **Documentos consultados**
 
 - **Tiempo de Respuesta**
 
-- **Logs**: Colocar números por los cuales están registrados:
+- **Logs**: Colocar números por los cuales están registrados:
 
-  - Emergency
+  - Emergency
 
-  - Alert
+  - Alert
 
-  - Critical
+  - Critical
 
-  - Error
+  - Error
 
-  - Warning
+  - Warning
 
-  - Notice
+  - Notice
 
-  - Informational
+  - Informational
 
-  - Debug
+  - Debug
 
 - **Resultado**:
 
-  - Éxito
+  - Éxito
 
-  - Error
+  - Error
 
-  - Sin respuesta
+  - Sin respuesta
 
-  - Respuesta parcial
+  - Respuesta parcial
 
 - **Feedback del usuario**:
 
-  - Like
+  - Like
 
-  - Regenerate
+  - Regenerate
 
-  - Valoración manual
+  - Valoración manual
 
-- **Versión del modelo/algoritmo**: Identifica qué motor o modelo respondió la consulta.
+- **Versión del modelo/algoritmo**: Identifica qué motor o modelo respondió la consulta.
 
 ## 2. Métricas para monitorear la salud del servicio
 
@@ -105,29 +105,29 @@ Implementar un sistema de trazabilidad y análisis que:
 
 Cada vez que un colaborador realiza una pregunta, registrar:
 
-- ✅ El texto de la pregunta.
+- El texto de la pregunta.
 
-- 🧩La categoría
+- La categoría
 
-- � El rol del usuari.
+- El rol del usuari.
 
-- � Los documentos consultados para respondr.
+- Los documentos consultados para respondr.
 
--🕐 Tiempos de respueta.
+- Tiempos de respueta.
 
- 📶 Resultado (respondido, con error, requiere nueva documentacón).
+ 📶 Resultado (respondido, con error, requiere nueva documentacón).
 
 ## 3. Recolección de las métricas propuestas
 
 **Herramientas / métodos sugeridos:*
 
-- Scripts en Python o Node.js para parseo de logs SON.
+- Scripts en Python o Node.js para parseo de logs SON.
 
-- Librerías de logging estructurado como winston, ino.
+- Librerías de logging estructurado como winston, ino.
 
-- Middleware como `express-prometheus-middleware` para exponer métricas TTP.
+- Middleware como `express-prometheus-middleware` para exponer métricas TTP.
 
-- Integración con Prometheus y visualización en Graana.
+- Integración con Prometheus y visualización en Graana.
 
 **Ejemplo de código para recolección:**
 
@@ -145,6 +145,6 @@ grep "error" logs/app.log | wc -l
 
 **Frecuencia:**
 
-- **Tiempo rea:** Dashboards en Grafana muestran métricas y logs en ivo.
+- **Tiempo rea:** Dashboards en Grafana muestran métricas y logs en ivo.
 
-- **Revisión diari:** El equipo de Dev 
+- **Revisión diari:** El equipo de Dev 
