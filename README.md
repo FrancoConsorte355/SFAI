@@ -74,7 +74,7 @@ Cada vez que un colaborador realiza una pregunta, registrar:
 - Scripts en Python o Node.js para parseo de logs JSON.
 - Librerías de logging estructurado como `winston`, `pino`.
 - Middleware como `express-prometheus-middleware` para exponer métricas HTTP.
-- Integración con **Prometheus** y visualización en **Grafana**.
+- Integración con **Mongo DB** y visualización en **Grafana**.
 
 **Ejemplo de código para recolección:**
 ```javascript
