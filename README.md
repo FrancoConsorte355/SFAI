@@ -108,8 +108,11 @@ Cada vez que un colaborador realiza una pregunta, registrar:
 
 -Medidas correctivas:
  Se ejecutan acciones de revisión del motor de sugerencias, incluyendo:
+ 
     -Análisis de cuellos de botella en el pipeline de procesamiento.
+    
     -Reentrenamiento o ajuste de hiperparámetros del modelo de sugerencias.
+    
     -Optimización del cache o reducción de complejidad del algoritmo si aplica.
 
 
