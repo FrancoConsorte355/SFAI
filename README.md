@@ -71,20 +71,9 @@ Cada vez que un colaborador realiza una pregunta, registrar:
 ## 3. Recolección de las métricas propuestas
 
 **Herramientas / métodos sugeridos:**
-- Scripts en Python o Node.js para parseo de logs JSON.
-- Librerías de logging estructurado como `winston`, `pino`.
-- Middleware como `express-prometheus-middleware` para exponer métricas HTTP.
-- Integración con **Mongo DB** y visualización en **Grafana**.
-
-**Ejemplo de código para recolección:**
-```javascript
-logger.error(`API call failed: ${error.message}`);
-```
-
-**Recolección básica desde terminal:**
-```bash
-grep "error" logs/app.log | wc -l
-```
+- LibreChat como backend generador de actividad.
+- MongoDB Atlas como base de datos de almacenamiento.
+- Grafana para visualización en tiempo real.
 
 ## 4. Plan Básico de Monitoreo
 
