@@ -92,15 +92,18 @@ Cada vez que un colaborador realiza una pregunta, registrar:
 - **Escalamiento**: Notificación al equipo técnico para aplicar medidas correctivas.
 
 ## 5. Escenario de Prueba de Monitoreo
+
 *Escenario*:
  Simulación de respuestas lentas del sistema de sugerencias durante una carga de consultas moderada.
+ 
 *Contexto*:
  Se detecta que el sistema presenta un tiempo promedio de respuesta de 6.2 segundos, superando el umbral de 5 segundos establecido para medir la eficiencia del motor de sugerencias. Las pruebas se realizan bajo una carga constante de 40 mensajes por segundo (MPS).
+ 
 *Resultado Esperado*:
--Alerta automática:
+  -Alerta automática:
  Se dispara una alerta cuando el promedio de respuesta supera los 5 segundos durante un período de más de 1 minuto.
 
--Logs y dashboards:
+  -Logs y dashboards:
  Muestran la diferencia entre la hora de ingreso de la pregunta y la generación de la respuesta, evidenciando la latencia con ejemplos concretos. Se visualiza un patrón consistente de respuestas demoradas.
 
 -Medidas correctivas:
