@@ -99,37 +99,37 @@ Cada vez que un colaborador realiza una pregunta, registrar:
  Se detecta que el sistema presenta un tiempo promedio de respuesta de 2.82 segundos, superando el umbral de 2 segundos establecido para medir la eficiencia del motor de sugerencias. Las pruebas se realizan bajo una carga constante de 40 mensajes por segundo (MPS).
  
 **Resultado Esperado:**
-*Alerta automática:*
- Se dispara una alerta cuando el promedio de respuesta supera los 2 segundos durante un período de más de 1 minuto.
+**Alerta automática:**
+ -Se dispara una alerta cuando el promedio de respuesta supera los 2 segundos durante un período de más de 1 minuto.
 
 
-*Logs y dashboards:*
- Muestran la diferencia entre la hora de ingreso de la pregunta y la generación de la respuesta, evidenciando la latencia con ejemplos concretos. Se visualiza un patrón consistente de respuestas demoradas.
+**Logs y dashboards:**
+ -Muestran la diferencia entre la hora de ingreso de la pregunta y la generación de la respuesta, evidenciando la latencia con ejemplos concretos. Se visualiza un patrón consistente de respuestas demoradas.
 
 
-*Medidas correctivas:*
--Ejecución de pruebas de carga:
-Simular diferentes niveles de tráfico (desde 10 hasta 100 MPS).
-Identificar el punto exacto de quiebre en el rendimiento del motor.
+**Medidas correctivas:**
+  **Ejecución de pruebas de carga:**
+-Simular diferentes niveles de tráfico (desde 10 hasta 100 MPS).
+-Identificar el punto exacto de quiebre en el rendimiento del motor.
 
--Optimización del motor de sugerencias:
-Revisión de las consultas realizadas al motor: detección de preguntas que demandan alto procesamiento (por ejemplo, prompts demasiado largos, anidados o con contextos innecesarios).
-Revisión del modelo: ajuste de hiperparámetros, simplificación del pipeline de generación de respuestas.
-Considerar técnicas de truncamiento y resumen para limitar el input que recibe el modelo.
+  **Optimización del motor de sugerencias:**
+-Revisión de las consultas realizadas al motor: detección de preguntas que demandan alto procesamiento (por ejemplo, prompts demasiado largos, anidados o con contextos innecesarios).
+-Revisión del modelo: ajuste de hiperparámetros, simplificación del pipeline de generación de respuestas.
+-Considerar técnicas de truncamiento y resumen para limitar el input que recibe el modelo.
 
--Implementación de caché inteligente con Redis:
-Cachear respuestas a preguntas frecuentes para reducir tiempo de generación.
-Uso de hashes del prompt como clave del caché.
-Establecer políticas de expiración (TTL) y actualización en background.
+  **Implementación de caché inteligente con Redis:**
+-Cachear respuestas a preguntas frecuentes para reducir tiempo de generación.
+-Uso de hashes del prompt como clave del caché.
+-Establecer políticas de expiración (TTL) y actualización en background.
 
--Monitoreo y logging avanzados:
-Incluir métricas como p95/p99 del tiempo de respuesta, además del promedio.
-Trazabilidad de cada request-response con logs estructurados.
-Dashboards con correlación entre carga, latencia y uso de CPU/RAM del motor.
+  **Monitoreo y logging avanzados:**
+-Incluir métricas del tiempo de respuesta, además del promedio.
+-Trazabilidad de cada request-response con logs estructurados.
+-Dashboards con correlación entre carga, latencia y uso de CPU/RAM del motor.
 
--Balanceo de carga / escalado horizontal:
-Aplicar auto-scaling de instancias del motor de sugerencias según CPU o latencia.
-Uso de colas de mensajes (como Kafka o RabbitMQ) para desacoplar el ingreso de preguntas y su procesamiento.
+  **Balanceo de carga / escalado horizontal:**
+-Aplicar auto-scaling de instancias del motor de sugerencias según CPU o latencia.
+-Uso de colas de mensajes (como Kafka o RabbitMQ) para desacoplar el ingreso de preguntas y su procesamiento.
 
 
 ## 6. Claridad y Precisión
